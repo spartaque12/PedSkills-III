@@ -32,7 +32,6 @@ The game's own accuracy values are: cops 60, SWAT 68, FBI 76, army 84, every oth
 - **Missions:** a hook on opcode `02E2 SET_CHAR_ACCURACY` (`0x446CA5`) applies `ScriptAccuracyMult` to accuracy set by mission scripts.
 - **Range:** `WeaponRangeMult` scales `m_fRange` in the loaded weapon data.
 
-The hooks are plain jumps to small assembly stubs. They're installed when the game starts its scripts, after every other ASI has loaded. An earlier build installed them while the ASIs were still loading, and that made `vehicle_audio_loader_for_1.0.asi` crash at startup.
 
 ## Build
 
